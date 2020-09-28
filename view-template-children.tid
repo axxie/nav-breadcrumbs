@@ -1,0 +1,9 @@
+title:  $:/plugins/axxie/nav-breadcrumbs/ViewTemplate-Children
+tags: $:/tags/ViewTemplate
+list-after: $:/core/ui/ViewTemplate/tags
+
+<$list filter="[field:parent<currentTiddler>limit[1]]">
+Child pages:
+</$list>
+<<list-links filter:[field:parent<currentTiddler>]>>
+
