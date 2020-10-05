@@ -30,25 +30,28 @@ exports.run = function() {
     try {
         var title = this.getVariable("currentTiddler");
         var tiddler = !!title && this.wiki.getTiddler(title);
-        if (!tiddler) {
-            return "";
-        }
         var array = [];
-        tiddler = this.wiki.getTiddler(tiddler.getFieldString("parent"));
+
         while (tiddler)
         {
-            if (array.includes(tiddler.fields.title))
+            var parent = tiddler.getFieldString("parent");
+            if (array.includes(parent))
             {
                 return "@@.tc-error\nError: infinite cycle of parent tiddlers detected!\n@@";
             }
-
-            array.push(tiddler.fields.title);
-            tiddler = this.wiki.getTiddler(tiddler.getFieldString("parent"));
+            if (!parent)
+            {
+                break;
+            }
+            array.push(parent);
+            tiddler = this.wiki.getTiddler(parent);
         }
+
         if (array.length == 0)
         {
             return "";
         }
+
         array.reverse();
         result = array.map(function(x) {
             return "[[" + x + "]]";
