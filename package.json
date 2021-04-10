@@ -1,0 +1,14 @@
+{
+  "name": "nav-breadcrumbs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/axxie/nav-breadcrumbs.git",
+  "license": "MIT",
+  "dependencies": {
+    "nodemon": "^2.0.7"
+  },
+  "scripts": {
+      "watch": "nodemon -e js,json,tid,info -i wiki/tiddlers/$__StoryList.tid ../../../tiddlywiki.js wiki --listen",
+      "build": "node ../../../tiddlywiki.js wiki --build index"
+  }
+}
