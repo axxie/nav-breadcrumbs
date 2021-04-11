@@ -1,0 +1,24 @@
+{
+    "tiddlers": [
+        { 
+            "file": "crumbs.js",
+            "isTiddlerFile": true
+        },
+        {
+            "file": "readme.tid",
+            "isTiddlerFile": true
+        },
+        { 
+            "file": "view-template-children.tid",
+            "isTiddlerFile": true
+        },
+        { 
+            "file": "view-template-crumbs.tid",
+            "isTiddlerFile": true
+        }
+    ]
+}
+
+
+
+

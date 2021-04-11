@@ -4,7 +4,7 @@
         "tiddlywiki/tiddlyweb",
         "tiddlywiki/filesystem",
         "tiddlywiki/highlight",
-         "axxie/nav-breadcrumbs"
+        "axxie/nav-breadcrumbs"
    ],
     "themes": [
         "tiddlywiki/vanilla",
